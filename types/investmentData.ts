@@ -1,11 +1,18 @@
+import { Market } from "./market";
+
 export interface InvestmentData {
-    tokenSymbol: string;
-    netAPY: number;
-    totalDeposits: number;
-    totalValueUSD: number;
-    curator: string;
-    collateral: string[];
-    unsecured: number;
-    unsecuredAPY: number;
-    credoraRating: string;
-  }
+  vaultId: string;
+  vaultName: string;
+  assetAddress: string;
+  netAPY: number;
+  userDeposits: number;
+  userShares: bigint;
+  totalDeposits: number;
+  totalValueUSD: number;
+  curator: string;
+  collateral: string[];
+  guardian: string;
+  // tokenBalance: GetBalanceReturnType;
+  // unsecured: number;
+  // market: Market | null;
+}
